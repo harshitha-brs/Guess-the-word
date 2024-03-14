@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Guess The Word</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1><b>Guess The Word</b></h1>
+    <br />
+    <br />
+    <p>
+      The "Guess the Word" problem involves guessing a secret word chosen by an
+      adversary.
+    </p>
+    <p>
+      The player is provided with a list of words, and after each guess, the
+    </p>
+    <p>
+      adversary provides feedback on the similarity between the guessed word and
+      the secret word.
+    </p>
+    <p>
+      The objective is to minimize the number of guesses required to correctly
+      identify the secret word.
+    </p>
+    <br />
+    <br />
+    <input type="text" id="secretInput" placeholder="Enter Secret Word" />
+    <br />
+    <br />
+    <input
+      type="text"
+      id="wordInput"
+      placeholder="Enter Word List (comma-separated)"
+    />
+    <br />
+    <br />
+    <input type="number" id="guessInput" placeholder="Enter Allowed Guesses" />
+    <br />
+    <br />
+    <button id="submit">Submit</button>
+    <br />
+    <br />
+    <div id="output"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
