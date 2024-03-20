@@ -31,6 +31,31 @@ document.getElementById("submit").addEventListener("click", function() {
   }
 });
 
+document
+  .getElementById("secretInput")
+  .addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      document.getElementById("submit").click();
+    }
+  });
+
+document
+  .getElementById("wordInput")
+  .addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      document.getElementById("submit").click();
+    }
+  });
+
+document
+  .getElementById("guessInput")
+  .addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      document.getElementById("submit").click();
+    }
+  });
+
+// Function to find the secret word
 const findSecretWord = (wordlist, master) => {
   const getMostCommonWord = wordlist => {
     const count = Array(6)
@@ -75,3 +100,13 @@ const findSecretWord = (wordlist, master) => {
     wordlist = getNewWordlist(wordlist, mostCommonWord, cnt);
   }
 };
+
+// Add this script to clear the input field on page load
+document.addEventListener("DOMContentLoaded", function() {
+  var secretInput = document.getElementById("secretInput");
+  var wordInput = document.getElementById("wordInput");
+  var guessInput = document.getElementById("guessInput");
+  secretInput.value = ""; // Set the input value to an empty string
+  wordInput.value = "";
+  guessInput.value = "";
+});
